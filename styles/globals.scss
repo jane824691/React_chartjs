@@ -1,0 +1,105 @@
+// 檔案位置: styles/global.scss
+// 變數覆蓋用 (Variable overrides)
+// 全站配色 colors
+$primary: #FFB44F;
+$info: #a4c6e9;
+$success: #90d2ce;
+$secondary: #f7bcc5;
+$danger: #f8723f;
+$light: #CA9145;
+$dark: #FABC81;
+
+
+// 按鈕圓角邊 button radius
+$border-radius: 0.5em;
+$border-radius-sm: 0.5em;
+$border-radius-lg: 0.5em;
+
+// 固定card高度
+// https://getbootstrap.com/docs/5.3/components/card/#grid-cards
+// $card-height: 100%;
+
+// ↑↑↑  變數覆蓋(Variable overrides) 要寫在這行"上面"  ↑↑↑
+// 這裡導入所有 bootstrap 樣式
+// 最後營運階段(實務)可以用部份導入來進行最佳化
+// 參考: https://getbootstrap.com/docs/5.3/customize/sass/#importing
+@import '~bootstrap/scss/bootstrap';
+// ↓↓↓  其它客製樣式要寫在這行的"下面" ↓↓↓
+
+// bs5內建圖示字體
+// 如果有使用其它圖示字體可以註解不使用
+// @import '~bootstrap-icons/font/bootstrap-icons';
+
+// google Zen Maru Gothic 字體
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;500;900&display=swap');
+
+// fixed for __next root div
+#__next {
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+body {
+  font-family: 'Zen Maru Gothic', Helvetica, Arial, 'PingFang TC',
+    '苹方-繁', 'Heiti TC', '黑體-繁', 'Microsoft JhengHei', '微軟正黑體',
+    // Cross-platform generic font family (default user interface font)
+    system-ui,
+    // Safari for macOS and iOS (San Francisco)
+    -apple-system,
+    // Windows
+    'Segoe UI',
+    // Android
+    Roboto,
+    // Basic web fallback
+    'Helvetica Neue',
+    Arial,
+    // Linux
+    'Noto Sans',
+    'Liberation Sans',
+    // Sans serif fallback
+    sans-serif,
+    // Emoji fonts
+    'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.form-member {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.btn:hover{
+  color: white;
+}
+
+
+.fs-1 {
+  font-size: calc(1.375rem + 1.5vw) !important;
+}
+
+.fs-2 {
+  font-size: calc(1.325rem + 0.9vw) !important;
+}
+
+.fs-3 {
+  font-size: calc(1.3rem + 0.6vw) !important;
+}
+
+.fs-4 {
+  font-size: calc(1.275rem + 0.3vw) !important;
+}
+
+.fs-5 {
+  font-size: 1.25rem !important;
+}
+
+.fs-6 {
+  font-size: 1rem !important;
+}
+
+// below is test only

@@ -1,38 +1,23 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 失業認定統計
 
-## Getting Started
-
-First, run the development server:
-
+首先，可以下載後以下列指令安裝環境並運行
 ```bash
+npm i
+# and
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ - 一開啟瀏覽器首頁即自動導向/chartJs頁面, 或以navbar的按鈕router.push來進行切換畫面
+ - 可觀看串聯[政府資料開放平臺](https://data.gov.tw/dataset/44759)的api帶出的所有月份資料
+ - 將chartjs套件生成的圖表 & 報表存成元件component
+ - 將串聯的api資料以props傳進元件裡再帶出所有資料 詳見所有月份資料 `pages/chartJs/index.js`
+ - 也可觀看將Json格式內存於data再導入資料的方式, 詳見個別月份頁面 `pages/chartJs/jan.js`
+ - SASS以全域設定的方式運行, 詳見 `styles/globals.scss`
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## 展示畫面
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 環境
+使用 [Next.js](https://nextjs.org/)，並以 [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) 來運行。
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

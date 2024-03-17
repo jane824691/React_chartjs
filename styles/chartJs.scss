@@ -1,0 +1,31 @@
+$primary-color: rgba(255, 99, 132, 0.6);
+$secondary-color: rgba(54, 162, 235, 0.6);
+$tertiary-color: rgba(255, 206, 86, 0.6);
+$quaternary-color: rgba(75, 192, 192, 0.6);
+$quinary-color: rgba(153, 102, 255, 0.6);
+$border-color: #777;
+$hover-color: RED;
+
+// 柱状图背景颜色
+$bar-background-colors: $primary-color, $secondary-color, $tertiary-color, $quaternary-color, $quinary-color;
+  
+  .container .chart-container .chart {
+    // 在 .chart 元素上应用样式
+    
+    // 背景颜色
+    background-color: $bar-background-colors;
+    
+    // 边框宽度和颜色
+    border-width: 1px;
+    border-color: $border-color;
+    
+    // 悬停时的边框宽度和颜色
+    &:hover {
+      border-width: 3px;
+      border-color: $hover-color;
+    }
+  }
+  
+.chart-box {
+    width: 50%;
+}
