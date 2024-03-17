@@ -8,7 +8,8 @@ npm run dev
 ```
 
 ## 展示畫面
-![ezgif-2-75cda787f0](https://github.com/jane824691/React_chartjs/assets/147688970/f99050f4-ab5b-4b8f-923e-fc0735997d01)
+![ezgif-2-e018182a91](https://github.com/jane824691/React_chartjs/assets/147688970/98be8465-1235-49e0-a8bf-5b5fbc01d908)
+
 
 
  - 一開啟瀏覽器首頁即自動導向/chartJs頁面, 或以navbar的按鈕router.push來進行切換畫面
