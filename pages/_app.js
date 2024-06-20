@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import store from './tools/store'
 import '@/styles/globals.scss'
 import '@/styles/chartJs.scss'
 import DefaultLayout from '@/components/layout/default-layout'
@@ -12,5 +15,10 @@ export default function MyApp({ Component, pageProps }) {
   const getLayout =
     Component.getLayout || ((page) => <DefaultLayout>{page}</DefaultLayout>)
 
-  return getLayout(<Component {...pageProps} />)
-}
+    return (
+      <Provider store={store}>
+        {getLayout(<Component {...pageProps} />)}
+      </Provider>
+    );
+  };
+  
