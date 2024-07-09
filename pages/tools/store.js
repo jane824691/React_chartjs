@@ -1,6 +1,8 @@
 import { createStore } from 'redux';
 
-// 要給基礎值
+// 此為非必要, 如無提供 initialState, 
+// 則 reducer 的初始狀態為 undefined, 容易出錯
+
 const initialState = {
   user: { name: '' },
   bornCity: { city: '' },
@@ -10,9 +12,13 @@ const initialState = {
 function userReducer(state = initialState, action) {
   switch (action.type) {
     case 'SET_USER':
-      return { ...state, user: action.user };
+      return { 
+        ...state,
+        user: action.user };
     case 'SET_BORN_CITY':
-      return { ...state, bornCity: action.bornCity };
+      return { 
+        ...state,
+        bornCity: action.bornCity };
 
     //   defalut+state擺最後
     default:
