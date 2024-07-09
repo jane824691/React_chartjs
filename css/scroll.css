@@ -1,0 +1,16 @@
+.scroll-container {
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  width: 100%;
+}
+
+.scroll-item {
+  flex: 0 0 auto;
+  margin-right: 16px;
+  padding: 16px;
+  color: #ffffff;
+  background-color: #4cacaf;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}/*# sourceMappingURL=scroll.css.map */
