@@ -51,6 +51,9 @@ export default function Calendar() {
   //------ 以下準備呈現在網頁上
   const allDataChunks = chunk(allData, 7)
 
+  const handleKeyDown = () =>{
+    console.log('correct');
+  }
   return (
     <>
       <h1>日曆</h1>
@@ -70,6 +73,7 @@ export default function Calendar() {
                 {v.map((item, idx) => (
                   <td
                     key={idx}
+                    onKeyDown={handleKeyDown} role="button" tabIndex="0"
                     onClick={() => {
                       if (item) setMyDate(item)
                     }}
