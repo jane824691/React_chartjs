@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import style from './index.module.scss'
-import ClearButton from './Components/clearButton'
+import ClearButton from './Components/ClearButton'
 
 // chunk - 依size分成子陣列，ex. chunk([1, 2, 3, 4, 5], 2) -> [[1,2],[3,4],[5]]
 const chunk = (arr, size) =>
@@ -30,7 +30,7 @@ export default function Calendar() {
   // 呈現標題
   const weekDayList = ['日', '一', '二', '三', '四', '五', '六']
 
-  // 本月有幾天
+  // 準備產生月曆本月有幾天
   // (上個月的最後一天是幾號)
   const days = new Date(nowY, nowM, 0).getDate()
 

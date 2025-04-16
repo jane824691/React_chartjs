@@ -1,7 +1,8 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import ClearButton from './clearButton';
+import ClearButton from './ClearButton';
 
+// test後可寫自訂測試標題, 給人看
 test('點擊清空按鈕時應呼叫 setMyDate 並傳入 0', () => {
     const setMyDateMock = jest.fn(); // mock function
 
