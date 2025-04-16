@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import style from './index.module.scss'
+import ClearButton from './Components/clearButton'
 
 // chunk - 依size分成子陣列，ex. chunk([1, 2, 3, 4, 5], 2) -> [[1,2],[3,4],[5]]
 const chunk = (arr, size) =>
@@ -51,46 +53,50 @@ export default function Calendar() {
   //------ 以下準備呈現在網頁上
   const allDataChunks = chunk(allData, 7)
 
-  const handleKeyDown = () =>{
+  const handleKeyDown = () => {
     console.log('correct');
   }
   return (
     <>
-      <h1>日曆</h1>
-      <h2 id="yearAndMonth">{`${nowY}/${nowM}/${myDate ? myDate : ''}`}</h2>
-      <table border="1">
-        <thead id="title">
-          <tr>
-            {weekDayList.map(function (v, i) {
-              return <th key={i}>{v}</th>
-            })}
-          </tr>
-        </thead>
-        <tbody id="data">
-          {allDataChunks.map((v, i) => {
-            return (
-              <tr key={i}>
-                {v.map((item, idx) => (
-                  <td
-                    key={idx}
-                    onKeyDown={handleKeyDown} role="button" tabIndex="0"
-                    onClick={() => {
-                      if (item) setMyDate(item)
-                    }}
-                    className={`${nowD === item ? 'today' : ''} ${
-                      myDate === item ? 'chosen-date' : ''
-                    }`}
-                    style={{ cursor: 'pointer' }}
+      <div className={style.container}>
+        <h1>Calender</h1>
+        <h2 id="yearAndMonth">{`${nowY}/${nowM}/${myDate ? myDate : ''}`}</h2>
+        <table border="1">
+          <thead id="title">
+            <tr>
+              {weekDayList.map(function (v, i) {
+                return <th key={i}>{v}</th>
+              })}
+            </tr>
+          </thead>
+          <tbody id="data">
+            {allDataChunks.map((v, i) => {
+              return (
+                <tr key={i}>
+                  {v.map((item, idx) => (
+                    <td
+                      key={idx}
+                      onKeyDown={handleKeyDown} role="button" tabIndex="0"
+                      onClick={() => {
+                        if (item) setMyDate(item)
+                      }}
+                      className={`${nowD === item ? 'today' : ''} ${myDate === item ? 'chosen-date' : ''
+                        }`}
+                      style={{ cursor: 'pointer' }}
                     // role="presentation"
-                  >
-                    {item}
-                  </td>
-                ))}
-              </tr>
-            )
-          })}
-        </tbody>
-      </table>
+                    >
+                      {item}
+                    </td>
+                  ))}
+                </tr>
+              )
+            })}
+          </tbody>
+        </table>
+        <br />
+
+        <ClearButton setMyDate={setMyDate}/>
+      </div>
       <style jsx>
         {`
           .today {
