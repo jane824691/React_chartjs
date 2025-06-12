@@ -53,5 +53,9 @@
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.0.4"
-  }
+  },
+      "engines": {
+    "node": "20.19.1"
+  },
+    "packageManager": "npm@10.8.2"
 }
